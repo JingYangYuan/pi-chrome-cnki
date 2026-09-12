@@ -34,6 +34,16 @@ Chrome 侧（一次性，手动）：开启**开发者模式** → **加载已�
 /chrome revoke                  # 用完撤销
 ```
 
+> **npm 装不上，或装了连不上？** npm 上 `pi-chrome@0.15.51` 的 tarball 是同一版本号下的旧构建，
+> 缺 MV3 `offscreen` 保活（`offscreen.html` / `offscreen.js` 与 manifest 的 `offscreen` 权限），
+> Chrome 升级后 worker 被回收即停止轮询 `127.0.0.1:17318`。改用离线镜像
+> [pi-chrome-mirror](https://github.com/JingYangYuan/pi-chrome-mirror)（逐字节复制可用构建 + `checksums.sha256` + release zip）：
+
+```bash
+git clone https://github.com/JingYangYuan/pi-chrome-mirror.git
+omp install ./pi-chrome-mirror      # 本地路径安装，不走 npm；先 --dry-run 看计划
+```
+
 ## 每次 CNKI 阶段前的四项验收
 
 | 步骤 | 命令 | 通过标准 |
