@@ -3,8 +3,6 @@
 
 # pi-chrome 浏览器控制后端（OMP 宿主）
 
-> **公开文档**：https://github.com/JingYangYuan/pi-chrome-cnki — 本文件与该仓库的 `pi-chrome-browser.md` 同步，由 `scripts/export_pi_chrome_doc.py` 生成对外发布版。可直接分享该链接给需要看适配说明的人。
-
 本文件是 `browser_control` 通用能力在 OMP（Oh My Pi / Pi coding agent）宿主上的后端配置与适配协议。CNKI kns8s 闭环（[CNKI kns8s 闭环协议](https://github.com/JingYangYuan/paper-master-4ss/blob/main/modules/lit/references/cnki-kns8s-closed-loop.md)）的浏览器操纵可由本后端或 ZCode 内置 browser-use 承担，两者共用同一闭环协议与同一来源不可替代铁律。
 
 - 适用宿主：OMP。ZCode 宿主读 [CNKI kns8s 闭环协议](https://github.com/JingYangYuan/paper-master-4ss/blob/main/modules/lit/references/cnki-kns8s-closed-loop.md) §2.1 的 browser-use 分支。
